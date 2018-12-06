@@ -102,7 +102,7 @@ class Shape extends React.Component {
     }
     render() {
         return (
-            <div style={{ backgroundColor: this.props.color }} className={`shape ${this.props.color} ${this.props.symbol} ${this.props.shade}`}></div>
+            <div style={{ backgroundColor: this.props.color }} className={`${this.props.color} ${this.props.symbol} ${this.props.shade}`}></div>
         );
     }
 }

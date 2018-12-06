@@ -67,17 +67,17 @@ body {
 
 
 .red.open {
-    background-color: white;
+    background-image: repeating-linear-gradient(100deg, white, white 1px, white, white 1px);
     border: 1px solid #FF6962;
 }
 
 .green.open {
-    background-color: white;
+    background-image: repeating-linear-gradient(100deg, white, white 1px, white, white 1px);
     border: 1px solid #77DD77;
 }
 
 .purple.open {
-    background-color: white;
+    background-image: repeating-linear-gradient(100deg, white, white 1px, white, white 1px);
     border: 1px solid #D2BBD4;
 }
 

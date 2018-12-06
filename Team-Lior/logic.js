@@ -48,7 +48,7 @@ class Shape extends React.Component {
     }
     render() {
         return (
-            <div className={`card ${this.props.color} ${this.props.shape} ${this.props.number} ${this.props.fill}`}></div>
+            <div className={`card ${this.props.color} ${this.props.shape} ${this.props.number} ${this.props.shade}`}></div>
         );
     }
 }

@@ -7,7 +7,6 @@ body {
     width: 300px;
     border: 2px solid black;
     box-shadow: 5px 10px #888888;
-<<<<<<< HEAD
     margin: 15px;
     border-radius: 5px;
     position: relative;
@@ -19,11 +18,8 @@ body {
     width: 1200px;
     height: 660px;
     margin: 2% 0 0 20%;
-}
-=======
     background: white;
 }
-
 
 
 .triangle {
@@ -34,4 +30,3 @@ body {
     border-bottom: 50px solid #555;
 }
 
->>>>>>> 5435ad3e748d7db966f1e183d8781324a14e31a1

@@ -33,12 +33,14 @@ body {
     height: 14vh;
     border-radius: 50% / 50%;
     border: 1px solid black;
+    margin: auto;
 }
 
 .square {
     width: 12vh;
     height: 12vh;
     border: 1px solid black;
+    margin: auto;
 }
 
 .diamond {
@@ -48,34 +50,35 @@ body {
     width: 10vh;
     text-align: center;
     transform:rotate(45deg);
+    margin: auto;
   }
 
 .red {
-    background-color: red;
+    background-color: #FF6962;
 }
 
 .green {
-    background-color: green;
+    background-color: #77DD77;
 }
 
 .purple {
-    background-color: purple;
+    background-color: #D2BBD4;
 }
 
 
 .red.open {
     background-color: white;
-    border: 1px solid red;
+    border: 1px solid #FF6962;
 }
 
 .green.open {
     background-color: white;
-    border: 1px solid green;
+    border: 1px solid #77DD77;
 }
 
 .purple.open {
     background-color: white;
-    border: 1px solid purple;
+    border: 1px solid #D2BBD4;
 }
 
 

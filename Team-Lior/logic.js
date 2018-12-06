@@ -15,7 +15,7 @@ class Board extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div className="board">
                 <Card color="red" symbol="oval" number="1" shade="solid"/>
                 <Card color="red" symbol="oval" number="3" shade="solid" />
                 <Card color="green" symbol="diamond" number="1" shade="solid" />

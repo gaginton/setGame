@@ -32,16 +32,18 @@ class Board extends React.Component {
         );
     }
 }
+
 class Card extends React.Component {
     constructor(props) {
         super(props);
     }
     render() {
         return (
-            <Shape />
+            <Shape color={this.props.color} symbol={this.props.color} number={this.props.number} shade={this.props.shade}/>
         );
     }
 }
+
 class Shape extends React.Component {
     constructor(props) {
         super(props);

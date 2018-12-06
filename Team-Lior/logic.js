@@ -16,7 +16,7 @@ class Board extends React.Component {
     render() {
         return (
             <div>
-                <Card />
+                <Card color="red" shape="" />
                 <Card />
                 <Card />
                 <Card />
@@ -48,7 +48,7 @@ class Shape extends React.Component {
     }
     render() {
         return (
-            <div className={`card ${this.props.color} ${this.props.shape} ${this.props.number} ${this.props.shade}`}></div>
+            <div className={`card ${this.props.color} ${this.props.symbol} ${this.props.number} ${this.props.shade}`}></div>
         );
     }
 }

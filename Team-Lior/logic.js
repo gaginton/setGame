@@ -36,7 +36,14 @@ class Board extends React.Component {
 class Card extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            color:"",
+            symbol:"",
+            number:"",
+            shade:"",
+        }
     }
+
     render() {
         return (
             <Shape color={this.props.color} symbol={this.props.color} number={this.props.number} shade={this.props.shade}/>
@@ -50,7 +57,7 @@ class Shape extends React.Component {
     }
     render() {
         return (
-            <div className={`card ${this.props.color} ${this.props.symbol} ${this.props.number} ${this.props.shade}`}></div>
+            <div  className={`card ${this.props.color} ${this.props.symbol} ${this.props.number} ${this.props.shade}`}></div>
         );
     }
 }

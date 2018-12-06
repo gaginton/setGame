@@ -51,17 +51,18 @@ class Board extends React.Component {
         return (
             <div className="board">
                 <Card handleClick={this.getColor} number={data_utils.board[0][0]} color={data_utils.board[0][1]} symbol={data_utils.board[0][2]}  shade={data_utils.board[0][3]} />
-                <Card handleClick={this.getColor} color="red" symbol="oval" number="3" shade="solid" />
-                <Card handleClick={this.getColor} color="red" symbol="diamond" number="1" shade="solid" />
-                <Card handleClick={this.getColor} color="red" symbol="square" number="1" shade="open" />
-                <Card handleClick={this.getColor} color="green" symbol="oval" number="3" shade="open" />
-                <Card handleClick={this.getColor} color="green" symbol="square" number="2" shade="open" />
-                <Card handleClick={this.getColor} color="green" symbol="oval" number="3" shade="stripe" />
-                <Card handleClick={this.getColor} color="green" symbol="diamond" number="3" shade="open" />
-                <Card handleClick={this.getColor} color="purple" symbol="oval" number="2" shade="open" />
-                <Card handleClick={this.getColor} color="purple" symbol="oval" number="2" shade="stripe" />
-                <Card handleClick={this.getColor} color="purple" symbol="square" number="3" shade="stripe" />
-                <Card handleClick={this.getColor} color="purple " symbol="oval" number="3" shade="solid" />
+                <Card handleClick={this.getColor} number={data_utils.board[1][0]} color={data_utils.board[1][1]} symbol={data_utils.board[1][2]}  shade={data_utils.board[1][3]} />
+                <Card handleClick={this.getColor} number={data_utils.board[2][0]} color={data_utils.board[2][1]} symbol={data_utils.board[2][2]}  shade={data_utils.board[2][3]} />
+                <Card handleClick={this.getColor} number={data_utils.board[3][0]} color={data_utils.board[3][1]} symbol={data_utils.board[3][2]}  shade={data_utils.board[3][3]} />
+                <Card handleClick={this.getColor} number={data_utils.board[4][0]} color={data_utils.board[4][1]} symbol={data_utils.board[4][2]}  shade={data_utils.board[4][3]} />
+                <Card handleClick={this.getColor} number={data_utils.board[5][0]} color={data_utils.board[5][1]} symbol={data_utils.board[5][2]}  shade={data_utils.board[5][3]} />
+                <Card handleClick={this.getColor} number={data_utils.board[6][0]} color={data_utils.board[6][1]} symbol={data_utils.board[6][2]}  shade={data_utils.board[6][3]} />
+                <Card handleClick={this.getColor} number={data_utils.board[7][0]} color={data_utils.board[7][1]} symbol={data_utils.board[7][2]}  shade={data_utils.board[7][3]} />
+                <Card handleClick={this.getColor} number={data_utils.board[8][0]} color={data_utils.board[8][1]} symbol={data_utils.board[8][2]}  shade={data_utils.board[8][3]} />
+                <Card handleClick={this.getColor} number={data_utils.board[9][0]} color={data_utils.board[9][1]} symbol={data_utils.board[9][2]}  shade={data_utils.board[9][3]} />
+                <Card handleClick={this.getColor} number={data_utils.board[10][0]} color={data_utils.board[10][1]} symbol={data_utils.board[10][2]}  shade={data_utils.board[10][3]} />
+                <Card handleClick={this.getColor} number={data_utils.board[11][0]} color={data_utils.board[11][1]} symbol={data_utils.board[11][2]}  shade={data_utils.board[11][3]} />
+                
             </div>
         );
     }

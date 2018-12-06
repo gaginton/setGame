@@ -38,11 +38,11 @@ class Board extends React.Component {
             // this.color3 = "";
         }
     }
-    
-    componentWillMount(){
+
+    componentWillMount() {
         data_utils.generateCards(window.data_utils)
         console.log(data_utils.allCards)
-        data_utils.generateBoard(window.data_utils.allCards,12)
+        data_utils.generateBoard(window.data_utils.allCards, 12)
         console.log(data_utils.board)
     }
 
@@ -50,19 +50,19 @@ class Board extends React.Component {
     render() {
         return (
             <div className="board">
-                <Card handleClick={this.getColor} number={data_utils.board[0][0]} color={data_utils.board[0][1]} symbol={data_utils.board[0][2]}  shade={data_utils.board[0][3]} />
-                <Card handleClick={this.getColor} number={data_utils.board[1][0]} color={data_utils.board[1][1]} symbol={data_utils.board[1][2]}  shade={data_utils.board[1][3]} />
-                <Card handleClick={this.getColor} number={data_utils.board[2][0]} color={data_utils.board[2][1]} symbol={data_utils.board[2][2]}  shade={data_utils.board[2][3]} />
-                <Card handleClick={this.getColor} number={data_utils.board[3][0]} color={data_utils.board[3][1]} symbol={data_utils.board[3][2]}  shade={data_utils.board[3][3]} />
-                <Card handleClick={this.getColor} number={data_utils.board[4][0]} color={data_utils.board[4][1]} symbol={data_utils.board[4][2]}  shade={data_utils.board[4][3]} />
-                <Card handleClick={this.getColor} number={data_utils.board[5][0]} color={data_utils.board[5][1]} symbol={data_utils.board[5][2]}  shade={data_utils.board[5][3]} />
-                <Card handleClick={this.getColor} number={data_utils.board[6][0]} color={data_utils.board[6][1]} symbol={data_utils.board[6][2]}  shade={data_utils.board[6][3]} />
-                <Card handleClick={this.getColor} number={data_utils.board[7][0]} color={data_utils.board[7][1]} symbol={data_utils.board[7][2]}  shade={data_utils.board[7][3]} />
-                <Card handleClick={this.getColor} number={data_utils.board[8][0]} color={data_utils.board[8][1]} symbol={data_utils.board[8][2]}  shade={data_utils.board[8][3]} />
-                <Card handleClick={this.getColor} number={data_utils.board[9][0]} color={data_utils.board[9][1]} symbol={data_utils.board[9][2]}  shade={data_utils.board[9][3]} />
-                <Card handleClick={this.getColor} number={data_utils.board[10][0]} color={data_utils.board[10][1]} symbol={data_utils.board[10][2]}  shade={data_utils.board[10][3]} />
-                <Card handleClick={this.getColor} number={data_utils.board[11][0]} color={data_utils.board[11][1]} symbol={data_utils.board[11][2]}  shade={data_utils.board[11][3]} />
-                
+                <Card handleClick={this.getColor} number={data_utils.board[0][0]} color={data_utils.board[0][1]} symbol={data_utils.board[0][2]} shade={data_utils.board[0][3]} />
+                <Card handleClick={this.getColor} number={data_utils.board[1][0]} color={data_utils.board[1][1]} symbol={data_utils.board[1][2]} shade={data_utils.board[1][3]} />
+                <Card handleClick={this.getColor} number={data_utils.board[2][0]} color={data_utils.board[2][1]} symbol={data_utils.board[2][2]} shade={data_utils.board[2][3]} />
+                <Card handleClick={this.getColor} number={data_utils.board[3][0]} color={data_utils.board[3][1]} symbol={data_utils.board[3][2]} shade={data_utils.board[3][3]} />
+                <Card handleClick={this.getColor} number={data_utils.board[4][0]} color={data_utils.board[4][1]} symbol={data_utils.board[4][2]} shade={data_utils.board[4][3]} />
+                <Card handleClick={this.getColor} number={data_utils.board[5][0]} color={data_utils.board[5][1]} symbol={data_utils.board[5][2]} shade={data_utils.board[5][3]} />
+                <Card handleClick={this.getColor} number={data_utils.board[6][0]} color={data_utils.board[6][1]} symbol={data_utils.board[6][2]} shade={data_utils.board[6][3]} />
+                <Card handleClick={this.getColor} number={data_utils.board[7][0]} color={data_utils.board[7][1]} symbol={data_utils.board[7][2]} shade={data_utils.board[7][3]} />
+                <Card handleClick={this.getColor} number={data_utils.board[8][0]} color={data_utils.board[8][1]} symbol={data_utils.board[8][2]} shade={data_utils.board[8][3]} />
+                <Card handleClick={this.getColor} number={data_utils.board[9][0]} color={data_utils.board[9][1]} symbol={data_utils.board[9][2]} shade={data_utils.board[9][3]} />
+                <Card handleClick={this.getColor} number={data_utils.board[10][0]} color={data_utils.board[10][1]} symbol={data_utils.board[10][2]} shade={data_utils.board[10][3]} />
+                <Card handleClick={this.getColor} number={data_utils.board[11][0]} color={data_utils.board[11][1]} symbol={data_utils.board[11][2]} shade={data_utils.board[11][3]} />
+
             </div>
         );
     }
@@ -73,22 +73,32 @@ class Card extends React.Component {
         super(props);
         this.select = this.select.bind(this)
         this.state = {
-            color: "",
-            symbol: "",
-            number: "",
-            shade: ""
+            color: this.props.color,
+            symbol: this.props.symbol,
+            number: this.props.number,
+            shade: this.props.shade,
+            selected: ""
         }
     }
     select(e) {
         this.props.handleClick(e)
+        if (this.state.selected == "") {
+            this.setState({
+                selected: "selected"
+            })
+        } else {
+            this.setState({
+                selected: ""
+            })
+        }
     }
     render() {
         var items = [];
-        for (var i = 0; i < this.props.number; i++) {
-            items.push(<Shape key={`item${i}`} shade={this.props.shade} symbol={this.props.symbol} color={this.props.color} />)
+        for (var i = 0; i < this.state.number; i++) {
+            items.push(<Shape key={`item${i}`} shade={this.state.shade} symbol={this.state.symbol} color={this.state.color} />)
         }
         return (
-            <div className="card" onClick={this.select}>
+            <div className={`card ${this.state.selected}`} onClick={this.select}>
                 {items}
             </div>
         );
@@ -102,7 +112,7 @@ class Shape extends React.Component {
     }
     render() {
         return (
-            <div style={{ backgroundColor: this.props.color }} className={`${this.props.color} ${this.props.symbol} ${this.props.shade}`}></div>
+            <div className={`shape ${this.props.color} ${this.props.symbol} ${this.props.shade}`}></div>
         );
     }
 }

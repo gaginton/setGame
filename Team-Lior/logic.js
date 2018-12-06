@@ -22,6 +22,9 @@ class Board extends React.Component {
         this.counter++;
         var str = e.target.className;
         var arr = str.split(" ");
+        if (e.target.classList.contains("card")){
+            e.target.classList.add("selected")
+        }
         if (this.counter === 0) {
             this.color1 = arr[1]
         } else if (this.counter === 1) {

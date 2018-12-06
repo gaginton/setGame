@@ -1,0 +1,7 @@
+Team Lior (2)
+
+Lead: Lior
+Logic: Jonathan, Yonatan
+React: JD, Illona
+Git: Guy
+CSS: Gaby, Cyntia, Daniel

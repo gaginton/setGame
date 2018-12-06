@@ -24,11 +24,65 @@ body {
 }
 
 
-.triangle {
-	width: 0;
-	height: 0;
-	border-left: 25px solid transparent;
-	border-right: 25px solid transparent;
-    border-bottom: 50px solid #555;
+.oval {
+    width: 60px;
+    height: 100px;
+    border-radius: 50% / 50%;
+    border: 1px solid black;
 }
 
+.square {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+}
+
+.diamond {
+    height: 60px;
+    text-align: center;
+    transform:rotate(45deg);
+    width:60px;
+  }
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.purple {
+    background-color: purple;
+}
+
+
+.red.open {
+    background-color: white;
+    border: 1px solid red;
+}
+
+.green.open {
+    background-color: white;
+    border: 1px solid green;
+}
+
+.purple.open {
+    background-color: white;
+    border: 1px solid purple;
+}
+
+
+.red.stripe {
+    background: linear-gradient(90deg, rgba(255,255,255,0.3) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 0), #ccc;
+    background-size:50px auto;
+}
+
+.green.stripe {
+    background-image: repeating-linear-gradient(100deg, white, white 1px, green, green 1px);
+
+}
+
+.purple.stripe {
+    background-image: repeating-linear-gradient(100deg, white, white 1px, purple, purple 1px);
+}

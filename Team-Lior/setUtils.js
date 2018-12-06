@@ -13,12 +13,14 @@ data_utils.generateCards = function(obj) {
         for (var j = 0; j < obj.colors.length; j ++) {
             for (var k = 0; k < obj.symbol.length; k ++) {
                 for (var l = 0; l < obj.shade.length; l ++) {
-                    data_utils.allCards.push ([i, j, k, l])
+                    data_utils.allCards.push ([obj.number[i], obj.colors[j], obj.symbol[k], obj.shade[l]])
                 }
             }
         }
     }
 }
+
+
 
 data_utils.shuffle = function(e) {
     var j, x, i;
@@ -37,5 +39,3 @@ data_utils.generateBoard = function(arr, num) {
         data_utils.board.push (arr[i]);
     }
 }
-
-// data_utils.generateBoard(data_utils.allCards,9);    Example of generating a board of 9 cards

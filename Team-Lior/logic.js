@@ -22,7 +22,7 @@ class Board extends React.Component {
         this.counter++;
         var str = e.target.className;
         var arr = str.split(" ");
-        if (e.target.classList.contains("card")){
+        if (e.target.classList.contains("card")) {
             e.target.classList.add("selected")
         }
         if (this.counter === 0) {
@@ -38,11 +38,19 @@ class Board extends React.Component {
             // this.color3 = "";
         }
     }
+    
+    componentWillMount(){
+        data_utils.generateCards(window.data_utils)
+        console.log(data_utils.allCards)
+        data_utils.generateBoard(window.data_utils.allCards,12)
+        console.log(data_utils.board)
+    }
+
 
     render() {
         return (
             <div className="board">
-                <Card handleClick={this.getColor} color="red" symbol="oval" number="1" shade="solid" />
+                <Card handleClick={this.getColor} number={data_utils.board[0][0]} color={data_utils.board[0][1]} symbol={data_utils.board[0][2]}  shade={data_utils.board[0][3]} />
                 <Card handleClick={this.getColor} color="red" symbol="oval" number="3" shade="solid" />
                 <Card handleClick={this.getColor} color="red" symbol="diamond" number="1" shade="solid" />
                 <Card handleClick={this.getColor} color="red" symbol="square" number="1" shade="open" />
@@ -74,7 +82,7 @@ class Card extends React.Component {
         this.props.handleClick(e)
     }
     render() {
-        var items=[];
+        var items = [];
         for (var i = 0; i < this.props.number; i++) {
             items.push(<Shape key={`item${i}`} shade={this.props.shade} symbol={this.props.symbol} color={this.props.color} />)
         }

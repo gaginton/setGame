@@ -82,17 +82,16 @@ body {
 
 
 .red.stripe {
-    background: linear-gradient(90deg, rgba(255,255,255,0.3) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 0), #ccc;
-    background-size:50px auto;
+    background-image: repeating-linear-gradient(100deg, white, red 1px, red, red 1px);
 }
 
 .green.stripe {
-    background-image: repeating-linear-gradient(100deg, white, white 1px, green, green 1px);
+    background-image: repeating-linear-gradient(100deg, white, green 1px, green, green 1px);
 
 }
 
 .purple.stripe {
-    background-image: repeating-linear-gradient(100deg, white, white 1px, purple, purple 1px);
+    background-image: repeating-linear-gradient(100deg, white, purple 1px, purple, purple 1px);
 }
 
 .selected{

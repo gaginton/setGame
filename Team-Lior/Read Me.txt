@@ -1,7 +1,12 @@
 Team Lior (2)
 
 Lead: Lior
-Logic: Jonathan, Yonatan
-React: JD, Illona
-Git: Guy
-CSS: Gaby, Cyntia, Daniel
+Logic: Jonathan, Yonatan    Responsible for generating random cards
+React: JD, Illona           
+Git: Guy                    Review code and help each group
+CSS: Gaby, Cyntia, Daniel   Make it purty. 
+
+MVP: Select 3 cards and check if they are a "set." Sets are 3 cards which have different number of objects, color and internal/border properties.
+Steps:
+- Make sure you can select 3 cards and alert user
+- Add features in itterations. 

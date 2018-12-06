@@ -23,22 +23,22 @@ class Board extends React.Component {
         var str = e.target.className;
         var arr = str.split(" ");
         if (this.counter === 0) {
-            color1 = arr[1]
+            this.color1 = arr[1]
         } else if (this.counter === 1) {
-            color2 = arr[1]
+            this.color2 = arr[1]
         } else if (this.counter === 2) {
-            color3 = arr[1];
-            function checkColor()
-            this.counter = 0
-            this.color1 = "";
-            this.color2 = "";
-            this.color3 = "";
+            this.color3 = arr[1];
+            // function checkColor()
+            // this.counter = 0
+            // this.color1 = "";
+            // this.color2 = "";
+            // this.color3 = "";
         } 
     }
 
     render() {
         return (
-            <div>
+            <div className="board">
                 <Card handleClick={this.getColor} color="red" symbol="oval" number="1" shade="solid" />
                 <Card handleClick={this.getColor} color="red" symbol="oval" number="3" shade="solid" />
                 <Card handleClick={this.getColor} color="red" symbol="diamond" number="1" shade="solid" />
@@ -72,7 +72,7 @@ class Card extends React.Component {
     }
     render() {
         return (
-            <div onClick={this.select}>
+            <div className="card" onClick={this.select}>
                 <Shape color={this.props.color} symbol={this.props.symbol} number={this.props.number} shade={this.props.shade} />
             </div>
         );
@@ -85,7 +85,7 @@ class Shape extends React.Component {
     }
     render() {
         return (
-            <div style={{ backgroundColor: this.props.color }} className={`card ${this.props.color} ${this.props.symbol} ${this.props.number} ${this.props.shade}`}></div>
+            <div style={{ backgroundColor: this.props.color }} className={`shape ${this.props.color} ${this.props.symbol} ${this.props.number} ${this.props.shade}`}></div>
         );
     }
 }
